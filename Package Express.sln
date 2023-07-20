@@ -1,25 +1,33 @@
 ﻿
-Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.33801.447
-MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Package Express", "Package Express\Package Express.csproj", "{29E281BE-8949-4F2A-876C-79C364070548}"
-EndProject
-Global
-	GlobalSection(SolutionConfigurationPlatforms) = preSolution
-		Debug|Any CPU = Debug|Any CPU
-		Release|Any CPU = Release|Any CPU
-	EndGlobalSection
-	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{29E281BE-8949-4F2A-876C-79C364070548}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{29E281BE-8949-4F2A-876C-79C364070548}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{29E281BE-8949-4F2A-876C-79C364070548}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{29E281BE-8949-4F2A-876C-79C364070548}.Release|Any CPU.Build.0 = Release|Any CPU
-	EndGlobalSection
-	GlobalSection(SolutionProperties) = preSolution
-		HideSolutionNode = FALSE
-	EndGlobalSection
-	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {54734FBD-5BB0-4904-AE30-515365D6A90C}
-	EndGlobalSection
-EndGlobal
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.Writeline("Welcome to Package Express");
+        Console.writeline("Please enter the package weight:");
+        double weight = Convert.toDouble(Console.ReadLine());
+
+        if (weight > 50.00)
+        {
+            Console.WriteLine("Package too heave to be shipped via Package Express. Hava a good day.")
+        }
+        else
+        {
+            Console.WriteLine("Please enter the package width:");
+            doule width = Convert.ToDouble(Console.Readline());
+
+            Console.WriteLine("Please enter the package height:");
+            doule height = Convert.ToDouble(Console.Readline());
+
+            Console.WriteLine("Please enter the package length:");
+            doule length = Convert.ToDouble(Console.Readline());
+
+            double dimensionsSum = width + height + length;
+            double shippingCost = (dimensionsSum * weight) / 100.00;
+
+            Console.WriteLine($"Your estimated total for shipping this package is: ${shippingCost:F2}");
+            }
+       }
+  }
