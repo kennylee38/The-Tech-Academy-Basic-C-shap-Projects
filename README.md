@@ -8,20 +8,15 @@
 	<meta name="viewpoint" content="width=device-width, initial=-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	
-	<script src="JS/One_page_website.js"defer></script>
-	<link rel="stylesheet" type="text/css" href="One_page_website.css">
+	
 	</head>
 
 		<!--home-->
 		<div id="home"></div>
 		<p>Hey! Over here</p>
-		<p>This is your favorite dance music video!</p>
+		<pThis is about the tech academy basic C-sharp project, Contains many types of operators like if, else if, boolean, and Xor.</p>
 		
-	<!--gallery-->
-	<div id="gallery"></div>
+	
 
-	<div>
-       <a href="https://youtu.be/OK_OyQxce7Q">Classic_Dance</a>
-    </div>
-		<div>
-	</div>	
+	
+	
