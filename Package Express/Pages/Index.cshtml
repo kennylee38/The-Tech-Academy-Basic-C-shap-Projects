@@ -1,0 +1,32 @@
+﻿using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.Writeline("Welcome to Package Express");
+        Console.writeline("Please enter the package weight:");
+        double weight = Convert.toDouble(Console.ReadLine());
+
+        if (weight > 50.00)
+        {
+            Console.WriteLine("Package too heave to be shipped via Package Express. Hava a good day.")
+        }
+        else
+        {
+            Console.WriteLine("Please enter the package width:");
+            doule width = Convert.ToDouble(Console.Readline());
+
+            Console.WriteLine("Please enter the package height:");
+            doule height = Convert.ToDouble(Console.Readline());
+
+            Console.WriteLine("Please enter the package length:");
+            doule length = Convert.ToDouble(Console.Readline());
+
+            double dimensionsSum = width + height + length;
+            double shippingCost = (dimensionsSum * weight) / 100.00;
+
+            Console.WriteLine($"Your estimated total for shipping this package is: ${shippingCost:F2}");
+            }
+       }
+  }
