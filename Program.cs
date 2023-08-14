@@ -1,45 +1,21 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq; // Import the namespace for LINQ
 
-namespace LamdaExpressionAssigment
-
-class Program
+namespace DatetimeAssignment
 {
-    static void Main(string[] args)
+    class Program
     {
-        //In the Main() method, create a list of at least 10 employees.
-        //At least two employees should have the first name "Joe".
-        List<Employee> campus = new List<Employee>()
+        static void Main(string[] args)
         {
-            new Employee { Id = 1, FirstName = "Joe", LastName = "Schmo" },
-            new Employee { Id = 2, FirstName = "Joe", LastName = "Thomas" },
-            new Employee { Id = 3, FirstName = "JimBob", LastName = "Coot" },
-            new Employee { Id = 4, FirstName = "Danny", LastName = "Dimes" },
-            new Employee { Id = 5, FirstName = "SaQuads", LastName = "Barkley" },
-            new Employee { Id = 6, FirstName = "George", LastName = "Title" },
-            new Employee { Id = 7, FirstName = "Joe", LastName = "Joesephson" },
-            new Employee { Id = 8, FirstName = "Maria", LastName = "Schmo" },
-            new Employee { Id = 9, FirstName = "Maria", LastName = "Rodriguez" },
-            new Employee { Id = 10, FirstName = "Stephanie", LastName = "Stevens" }
-        };
-
-        // Using foreach loop, create a new list of all employees with the first name "Joe".
-        List<Employee> joes = new List<Employee>();
-        foreach (Employee employee in campus)
-        {
-            if (employee.firstName == "Joe")
-            {
-                joes.Add(employee);
-            }
-        }
-
-        //Do the same thing again, but this time with a lambda expression.
-        List<Employee> joes2 = campus.Where(x => x.FirstName == "Joe").ToList();
-        //Using a lambda expression, make a list of all employees with an Id number greater than 5
-        List<Employee> bigId = campus.Where(x => x.Id > 5).ToList();
-        Console.ReadLine();
-       
+            //Print the current date and time to the console
+            Console.WriteLine("The current time is: " + DateTime.Now);
+            //Ask the user for a number
+            Console.WriteLine("\nEnter a number to see what the time will be in that many hours:");
+            float answer = float.Parse(Console.ReadLine());
+            //Print what time it will be in the amount of hours the user input
+            Console.WriteLine("{0} + {1} hours(s) = {2}", DateTime.Now, answer, DateTime.Now.AddHours(answer));
         }
     }
 }
+        
+    
+
