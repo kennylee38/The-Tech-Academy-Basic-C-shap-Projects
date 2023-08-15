@@ -1,21 +1,35 @@
 ﻿using System;
 
-namespace DatetimeAssignment
+namespace ConstructorAssignment
 {
     class Program
     {
         static void Main(string[] args)
         {
-            //Print the current date and time to the console
-            Console.WriteLine("The current time is: " + DateTime.Now);
-            //Ask the user for a number
-            Console.WriteLine("\nEnter a number to see what the time will be in that many hours:");
-            float answer = float.Parse(Console.ReadLine());
-            //Print what time it will be in the amount of hours the user input
-            Console.WriteLine("{0} + {1} hours(s) = {2}", DateTime.Now, answer, DateTime.Now.AddHours(answer));
+            // Create a const variable
+            const string const1 = "Your name is: ";
+            const string const2 = "Your favorite number is: ";
+            Console.WriteLine("Enter your name or favorite number: ");
+
+            // Create a variable using the "var" keyword
+            var answer = Console.ReadLine();
+            if (float.TryParse(answer, out float x))
+            {
+                Console.WriteLine(const2);
+                Console.WriteLine(const2);
+                Chain newChain = new Chain(x);
+                Console.ReadLine();
+            }
+            else
+            {
+                Console.WriteLine(const1);
+                Chain newChain = new Chain(answer);
+                Console.ReadLine();
+            }
         }
     }
 }
+
+            
         
-    
 
