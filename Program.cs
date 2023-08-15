@@ -1,35 +1,42 @@
 ﻿using System;
 
-namespace ConstructorAssignment
+namespace AgeCalculator
 {
     class Program
     {
         static void Main(string[] args)
         {
-            // Create a const variable
-            const string const1 = "Your name is: ";
-            const string const2 = "Your favorite number is: ";
-            Console.WriteLine("Enter your name or favorite number: ");
+            try
+            {
+                // Ask the user for their age
+                Console.Write("Enter your age: ");
+                int age = int.Parse(Console.ReadLine());
 
-            // Create a variable using the "var" keyword
-            var answer = Console.ReadLine();
-            if (float.TryParse(answer, out float x))
-            {
-                Console.WriteLine(const2);
-                Console.WriteLine(const2);
-                Chain newChain = new Chain(x);
-                Console.ReadLine();
+                // Validate the age
+                if (age <= 0)
+                {
+                    throw new ArgumentException("Age must be a positive number.");
+                }
+
+                // Calculate birth year
+                int currentYear = DateTime.Now.Year;
+                int birthYear = currentYear - age;
+
+                // Display the birth year
+                Console.WriteLine($"You were born in {birthYear}.");
             }
-            else
+            catch (FormatException)
             {
-                Console.WriteLine(const1);
-                Chain newChain = new Chain(answer);
-                Console.ReadLine();
+                Console.WriteLine("Invalid input. Please enter a valid number.");
+            }
+            catch (ArgumentException ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+            catch (Exception)
+            {
+                Console.WriteLine("An error occurred.");
             }
         }
     }
 }
-
-            
-        
-
