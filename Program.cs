@@ -1,42 +1,22 @@
 ﻿using System;
 
-namespace AgeCalculator
+namespace MethodClassAssignment
 {
-    class Program
+     class Program
     {
-        static void Main(string[] args)
+    static void Main(string[] args)
+
         {
-            try
-            {
-                // Ask the user for their age
-                Console.Write("Enter your age: ");
-                int age = int.Parse(Console.ReadLine());
+        // Instantiate the MathOperation class
+        MathOperation mathOperation = new MathOperation();
 
-                // Validate the age
-                if (age <= 0)
-                {
-                    throw new ArgumentException("Age must be a positive number.");
-                }
+        // Call the method in the class, passing in two numbers
+        mathOperation.PerformMathOperation(10, 20);
 
-                // Calculate birth year
-                int currentYear = DateTime.Now.Year;
-                int birthYear = currentYear - age;
-
-                // Display the birth year
-                Console.WriteLine($"You were born in {birthYear}.");
-            }
-            catch (FormatException)
-            {
-                Console.WriteLine("Invalid input. Please enter a valid number.");
-            }
-            catch (ArgumentException ex)
-            {
-                Console.WriteLine(ex.Message);
-            }
-            catch (Exception)
-            {
-                Console.WriteLine("An error occurred.");
-            }
+        // Call the method in the class, specifying the parameters by name
+        mathOperation.PerformMathOperation(firstNumber: 15, secondNumber: 25);
         }
     }
+
 }
+
