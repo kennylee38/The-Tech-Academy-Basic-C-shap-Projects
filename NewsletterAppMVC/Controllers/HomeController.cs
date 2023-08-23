@@ -15,7 +15,7 @@ namespace NewsletterAppMVC.Controllers
         {
             return View();
         }
-        public ActionResult SignUp(string FirstName, string LastName, string EmailAddress, object, object sqlDbType)
+        public ActionResult SignUp(string FirstName, string LastName, string EmailAddress, object sqlDbType)
         {
             if (string.IsNullOrEmpty(FirstName) || string.IsNullOrEmpty(LastName) || string.IsNullOrEmpty(EmailAddress))
 
