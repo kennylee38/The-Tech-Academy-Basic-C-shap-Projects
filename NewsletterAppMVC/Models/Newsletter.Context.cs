@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace NewsletterAppMVC
+namespace NewsletterAppMVC.Models
 {
     using System;
     using System.Data.Entity;
@@ -25,6 +25,7 @@ namespace NewsletterAppMVC
             throw new UnintentionalCodeFirstException();
         }
     
+        public virtual DbSet<sysdiagram> sysdiagrams { get; set; }
         public virtual DbSet<SignUp> SignUps { get; set; }
     }
 }
